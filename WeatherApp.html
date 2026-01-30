@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+
+  <style>
+    #inputContainer {
+      height: 80px;
+      width: 100%;
+      background-color: slategray;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      width: 100vw;
+      height: 100vh;
+    }
+    #input {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    .parent {
+      display: flex;
+      flex-direction: row;
+      width: 300px;
+      height: 100px;
+      background-color: darkslategray;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 80px);
+      width: 100%;
+      background-color: darkslategray;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="inputContainer">
+    <div id="input">
+      <input type="text" id="locationInput" placeholder="Enter location..." />
+      <button id="getWeatherBtn">search</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="parent">
+
+      <div class="parent1">
+        <div class="child1" id="temp" style="font-size: 24px; color: white">
+          --°C
+        </div>
+      </div>
+
+      <div class="parent2">
+        <div class="city" id="city" style="font-size: 24px; color: white">
+          City
+        </div>
+        <div class="Date">
+          <span id="time" style="color: white">--:--</span>
+          <span id="day" style="color: white">Day</span>
+          <span id="date" style="color: white">Date</span>
+        </div>
+      </div>
+
+      <div class="parent3">
+        <div class="child3">
+          <img id="icon" style="height: 50px" />
+        </div>
+        <div class="child4" id="condition" style="font-size: 20px; color: white">
+          Condition
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="WeatherApp.js"></script>
+</body>
+</html>
