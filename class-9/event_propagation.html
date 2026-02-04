@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Propagation</title>
+  </head>
+  <body>
+    <style>
+    div{
+        border-radius: 4px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        margin: 5px;
+        
+
+    }
+      #grandparent{
+         height: 150px;
+          background-color: rgb(99, 255, 255);
+          width: 1200px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+      }
+      #parent{
+        height: 80px;
+            background-color: rgb(192, 132, 255);
+            width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+      }
+      #child{
+        height: 25px;
+        background-color: rgb(250, 157, 233);
+        width: 70px;
+      }
+      #sibling{
+          height: auto;
+          width: auto;
+          background-color: antiquewhite;
+          border-radius: 8px;
+          display: flex;
+          flex-direction: column;
+          
+      }
+      #sibling-child{
+            height: 30px;
+            width:300px;
+            background-color: rgb(254, 232, 200);
+            display: flex;
+            justify-content: space-around;
+      }
+      #eventlogdata {
+        font-size: small;
+      }
+    </style>
+
+
+    <h1>Event Flow Playground</h1>
+    <h5>Demonstrating Capturing, Bubbling & Propagation Control</h5>
+                       
+
+    
+    <div style="display: flex; gap: 20px">
+
+      <div id="grandparent"> GrandParent
+        <div id="parent"> Parent
+            <div
+                id="child">Click Me</div>
+            </div>
+        </div>
+
+
+      <div id="sibling">
+
+        <div id="sibling-child">
+            <div>Event Log</div>
+            <button id="clear-log" style="float: right">Clear Log</button>
+        </div>
+
+        
+        <div id="eventlogdata">
+            
+        </div>
+
+
+
+      </div>
+    </div>
+
+
+    <script src="event_propagation.js"></script>
+
+
+  </body>
+</html>
